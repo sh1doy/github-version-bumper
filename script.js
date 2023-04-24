@@ -86,7 +86,7 @@ function main() {
         newDiv.className = getButtonClassName();
         newDiv.id = getButtonClassName();
         buttonDescription.appendChild(getDescription());
-        buttonDescription.appendChild(getVersionElement());
+        buttonDescription.appendChild(getVersionElement(latestVersion));
         newDiv.appendChild(buttonDescription);
 
         // Prepare Buttons
@@ -102,7 +102,7 @@ function main() {
 
         newDiv.appendChild(buttonContainer);
         document
-            .getElementsByClassName("js-release-tag")[0]
+            .querySelector("div[class*='js-release-tag']")
             .appendChild(newDiv);
     }
 
