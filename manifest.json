@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "GitHub Release Tag Version Bumper",
+    "version": "0.0.1",
+    "description": "One click to bump version and generate release note",
+    "content_scripts": [
+        {
+            "matches": ["https://github.com/*"],
+            "js": ["script.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": ["tabs", "scripting"],
+    "host_permissions": ["*://github.com/*"],
+    "icons": {
+        "48": "images/48.png",
+        "128": "images/128.png"
+    }
+}
